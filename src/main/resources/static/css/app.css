@@ -1,0 +1,17 @@
+.titles {
+    width: 30%;
+    height: 100%;
+    float: left;
+    background-color: cadetblue;
+}
+
+.jobAnnouncement {
+    width: 70%;
+    height: 100%;
+    float: left;
+    background-color: antiquewhite;
+}
+
+.clear {
+    clear: both;
+}

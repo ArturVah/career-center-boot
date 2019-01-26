@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>CareerCenter</title>
+    <link rel="stylesheet" href="css/app.css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="titleBar" class="titles">
+
+</div>
+<div class="jobAnnouncement">
+
+</div>
+<div class="clear">
+
+</div>
+
+<script>
+    $.get('/jobs', function (response, statusText) {
+        console.log(response);
+        console.log(statusText);
+        response.forEach(function (value) {
+            $('#titleBar')
+                .append(
+                    '<a href="/jobs/' +
+                    value.id + '"' +
+                    '>' +
+                    value.title +
+                    '</a>'
+                )
+        });
+    });
+
+</script>
+</body>
+</html>
